@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-users"></i> User Manager</h1>
+        
+        <!-- Form -->
+        <div class="card">
+            <h2>REGISTRACTION</h2>
+            <div class="form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="mobile" placeholder="Mobile" required>
+                <div class="password-field">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="button" class="eye-btn" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button id="registerBtn" class="btn add-btn">
+                        <i class="fas fa-plus"></i> REGISTER
+                    </button>
+                    <button id="clearBtn" class="btn clear-btn">
+                        <i class="fas fa-times"></i> Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Table -->
+        <div class="card">
+            <div class="table-header">
+                <h2>Users List</h2>
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Search users...">
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTable">
+                        <tr class="empty">
+                            <td colspan="5">No users found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
